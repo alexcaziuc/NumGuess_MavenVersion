@@ -18,13 +18,16 @@ public class NumGeneratorBusinessLogic {
 
 
 
-    private static final int MAX_NUMBER = 10;
+    private static final int MAX_NUMBER = 8;
 
     private boolean isFirstTime = true;
     private boolean successfulGuess;
     private int numberOfGuesses;
     private int generatedNumber;
     private String hint;
+    private double timp;
+    private long timpPornire;
+    private long timpOprire;
 
     public NumGeneratorBusinessLogic(){
         resetNumberGenerator();
@@ -46,6 +49,14 @@ public class NumGeneratorBusinessLogic {
         return isFirstTime;
     }
 
+    public double getTimp() {
+        return timp;
+    }
+
+    public void setTimp(double timp) {
+        this.timp = timp;
+    }
+
     public void resetNumberGenerator(){
         isFirstTime = true;
         numberOfGuesses = 0;
@@ -57,11 +68,19 @@ public class NumGeneratorBusinessLogic {
             generatedNumber = NumGenerator.generate(MAX_NUMBER);
             System.out.println("gennr:"+generatedNumber);
             isFirstTime = false;
+
+            timpPornire = System.currentTimeMillis();
+
         }
         numberOfGuesses++;
         if (guessNumber == generatedNumber) {
             hint="";
             successfulGuess = true;
+
+            timpOprire = System.currentTimeMillis();
+            timp = (timpOprire - timpPornire) / 1000;
+
+
         } else if (guessNumber < generatedNumber) {
             hint = "higher";
             successfulGuess = false;

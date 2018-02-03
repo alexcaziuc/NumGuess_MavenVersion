@@ -41,17 +41,18 @@
                 var keySuccess = jSonMessage.keySuccess;
                  var keyHint = jSonMessage.keyHint;
                  var keyNrGuesses = jSonMessage.keyNrGuesses;
+                 var keyTime = jSonMessage.keyNrTime;
 
                  if(keySuccess=="false") {
                      if (keyHint == "higher")
-                         document.getElementById("serverResponse").innerHTML = "WRONG, Try a Higher one!";
+                         document.getElementById("serverResponse").innerHTML = "Gresit, Are mai mult de trait!";
                      else if (keyHint == "lower")
-                         document.getElementById("serverResponse").innerHTML = "WRONG, Try a Lower one!";
+                         document.getElementById("serverResponse").innerHTML = "Gresit, Are mai putin de trait!";
                  }
                  else
                  if(keySuccess=="true")
                  {
-                     document.getElementById("serverResponse").innerHTML = "Congrats, you guessed the number " + document.getElementById("number").value + " after " + keyNrGuesses + " guesses.";
+                     document.getElementById("serverResponse").innerHTML = "Condoleante, a murit! " + document.getElementById("number").value + " dupa " + keyNrGuesses + " incercari." + " Ai ghicit in " + keyTime + " secunde";
                  }
              }
          }

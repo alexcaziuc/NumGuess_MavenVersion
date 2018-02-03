@@ -61,6 +61,11 @@ public class NumGeneratorBusinessLogic {
         isFirstTime = true;
         numberOfGuesses = 0;
         hint = "";
+        resetTime();
+    }
+
+    public void resetTime() {
+        timp = 0;
     }
 
     public boolean determineGuess(int guessNumber){
@@ -80,7 +85,8 @@ public class NumGeneratorBusinessLogic {
             timpOprire = System.currentTimeMillis();
             timp = (timpOprire - timpPornire) / 1000;
 
-
+            SendMail sendMail = new SendMail("alexcaziuc@gmail.com");
+            sendMail.sendEmailUsingGmail();
         } else if (guessNumber < generatedNumber) {
             hint = "higher";
             successfulGuess = false;
@@ -88,6 +94,7 @@ public class NumGeneratorBusinessLogic {
             hint = "lower";
             successfulGuess = false;
         }
+
         return successfulGuess;
     }
 

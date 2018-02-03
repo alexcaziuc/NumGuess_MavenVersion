@@ -71,7 +71,7 @@ h1 {
     background-color: white;
     color:black;
     padding-left: .8em;
-    margin-left: 5em;
+    margin-left: 8em;
 ;
 }
 
@@ -101,6 +101,10 @@ img{
     border-color: red;
 }
 
+input {
+    background: whitesmoke;
+    color: darkred;
+}
 
 
 

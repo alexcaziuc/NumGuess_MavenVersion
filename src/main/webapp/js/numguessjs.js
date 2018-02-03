@@ -28,7 +28,7 @@
                  var jSonMessage = JSON.parse(xmlHttp.responseText);
                  var keyRestartGame=jSonMessage.keyRestartGame;
                  if (keyRestartGame != undefined && keyRestartGame.length > 0) {
-                     alert("Restart cu succes, jocul a reinceput!");
+                     alert("Restart cu succes, Iliescu a inviat!");
                      document.getElementById("number").value="";
                      return;
                  }

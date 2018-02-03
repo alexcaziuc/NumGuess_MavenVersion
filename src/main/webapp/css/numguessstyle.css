@@ -28,8 +28,8 @@ h1 {
     background-color: whitesmoke;
     color: darkred;
     font-family: Georgia, Times, serif;
-    border-top: 3px solid #7da5d8;
-    border-bottom: 3px solid #7da5d8;
+    border-top: 3px solid darkred;
+    border-bottom: 3px solid darkred;
     padding-top: .2em;
     padding-bottom: .2em;
     padding-left: .8em;
@@ -39,7 +39,7 @@ h1 {
 #header {
     position: absolute;
     text-align: center;
-    border-top: 3px solid #7da5d8;
+    border-top: 3px solid darkred;
     width: 100%;
 }
 
